@@ -6,7 +6,7 @@
       class="datepicker"
       :clearable="canDelete"
       :dark="isDarkTheme"
-      :disabled-week-days="weekDaysDisabled ? [6, 0] : []"
+      :disabled-week-days="weekDaysDisabled ? [0] : []"
       :disabled="disabled"
       :enable-time-picker="false"
       :format="format"
