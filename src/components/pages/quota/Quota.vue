@@ -364,7 +364,7 @@ export default {
     isWeekend(year, month, day) {
       let date = moment(`${year}-${month}-${day}`, 'YYYY-MM-DD')
       if (day < 10) date = moment(`${year}-${month}-0${day}`, 'YYYY-MM-DD')
-      return [0, 6].includes(date.day())
+      return date.day() === 0 // Only Sunday
     },
 
     loadData() {

@@ -141,7 +141,7 @@ export default {
 
       calendarApi.addEvent({
         display: 'background',
-        daysOfWeek: [0, 6], // Sunday + Saturday
+        daysOfWeek: [0], // Only Sunday
         backgroundColor: '#ddd',
         extendedProps: {
           isOff: true
