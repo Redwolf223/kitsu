@@ -691,7 +691,7 @@ export default {
       return {
         to: parseDate(this.currentProduction.start_date).toDate(),
         from: parseDate(this.currentProduction.end_date).toDate(),
-        days: [6, 0]
+        days: [0]
       }
     },
 
@@ -699,7 +699,7 @@ export default {
       return {
         to: parseDate(this.currentProduction.start_date).toDate(),
         from: parseDate(this.currentProduction.end_date).toDate(),
-        days: [6, 0]
+        days: [0]
       }
     },
 
@@ -707,7 +707,7 @@ export default {
       return {
         to: parseDate(this.currentProduction.start_date).toDate(),
         from: parseDate(this.currentProduction.end_date).toDate(),
-        days: [6, 0]
+        days: [0]
       }
     },
 
