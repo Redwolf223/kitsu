@@ -205,7 +205,6 @@ export const getDatesFromEndDate = (
 
 export const getBusinessDays = (startDate, endDate, daysOff = []) => {
   const Sunday = 0
-  const Saturday = 6
   const datesOff = daysOff
     ? getDayOffRange(daysOff).map(dayOff => dayOff.date)
     : []
@@ -214,7 +213,6 @@ export const getBusinessDays = (startDate, endDate, daysOff = []) => {
   while (newDate.isSameOrBefore(endDate)) {
     if (
       newDate.day() !== Sunday &&
-      newDate.day() !== Saturday &&
       !datesOff.includes(newDate.format('YYYY-MM-DD'))
     ) {
       nbDays++
@@ -229,7 +227,6 @@ export const addBusinessDays = (originalDate, numDaysToAdd, daysOff = []) => {
     return
   }
   const Sunday = 0
-  const Saturday = 6
   const datesOff = daysOff
     ? getDayOffRange(daysOff).map(dayOff => dayOff.date)
     : []
@@ -238,7 +235,6 @@ export const addBusinessDays = (originalDate, numDaysToAdd, daysOff = []) => {
   while (daysRemaining >= 0) {
     if (
       newDate.day() !== Sunday &&
-      newDate.day() !== Saturday &&
       !datesOff.includes(newDate.format('YYYY-MM-DD'))
     ) {
       daysRemaining--
@@ -256,7 +252,6 @@ export const removeBusinessDays = (
   daysOff = []
 ) => {
   const Sunday = 0
-  const Saturday = 6
   const datesOff = daysOff
     ? getDayOffRange(daysOff).map(dayOff => dayOff.date)
     : []
@@ -265,7 +260,6 @@ export const removeBusinessDays = (
   while (daysRemaining >= 0) {
     if (
       newDate.day() !== Sunday &&
-      newDate.day() !== Saturday &&
       !datesOff.includes(newDate.format('YYYY-MM-DD'))
     ) {
       daysRemaining--

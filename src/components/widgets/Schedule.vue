@@ -1025,7 +1025,7 @@ export default {
         day.off = daysOff.includes(day.toISOString().slice(0, 10))
         day.newWeek = day.isoWeekday() === 1
         day.newMonth = day.date() === 1
-        day.weekend = [6, 7].includes(day.isoWeekday())
+        day.weekend = day.isoWeekday() === 7 // Only Sunday
         day.weekNumber = day.week()
         day.text = day.format('YYYY-MM-DD')
         day.monthText = day.format('MMMM YY')

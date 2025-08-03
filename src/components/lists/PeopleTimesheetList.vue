@@ -330,7 +330,7 @@ export default {
 
     isWeekend(year, month, day) {
       const date = moment(`${year}-${month}-${day}`, 'YYYY-M-D')
-      return [0, 6].includes(date.day())
+      return date.day() === 0 // Only Sunday
     },
 
     isDaySelected(personId, year, month, day) {
